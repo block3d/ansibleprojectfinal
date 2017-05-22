@@ -5,10 +5,7 @@
     ansible_ssh_user: root
     ansible_ssh_pass: electric dancy pants
   roles:
-    - role: install_common
     - role: install_keys
-  tasks:
-    - name: Install nano
-      package:
-        name: nano
-        state: latest
+    - role: install_packages
+    - role: create_newuser
+
