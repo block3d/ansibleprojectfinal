@@ -1,0 +1,22 @@
+- iptables:
+     chain: INPUT
+     protocol: TCP
+     destination_port: "{{ item }}"
+     jump: ACCEPT
+  become: yes
+  with_items:
+    - 25
+    - 110
+    - 143
+  when: "'Centos7' in group_names"
+- iptables:
+     chain: INPUT
+     protocol: TCP
+     destination_port: "{{ item }}"
+     jump: ACCEPT
+  become: yes
+  with_items:
+     - 80
+     - 443
+  when: "'Centos7b' in group_names"
+

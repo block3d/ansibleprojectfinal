@@ -9,9 +9,21 @@
     - 'mtr'
     - 'nano'  
     - 'python-dbus' 
-- name: Install DNS utilities (Debian)
+- name: Install network manager (Debian)
+  package:
+    name: network-manager
+    state: latest
+  tags: packages
+  when: ansible_pkg_mgr == 'apt'
+- name: Install glib network manager (Debian)
   package:
     name: libnm-glib-dev
+    state: latest
+  tags: packages
+  when: ansible_pkg_mgr == 'apt'
+- name: Install DNS utilities (Debian)
+  package:
+    name: dnsutils
     state: latest
   tags: packages
   when: ansible_pkg_mgr == 'apt'
