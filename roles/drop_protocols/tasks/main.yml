@@ -1,0 +1,16 @@
+- iptables:
+     chain: INPUT
+     protocol: TCP
+     destination_port: 22
+     jump: DROP
+  become: yes
+- iptables:
+     chain: INPUT
+     protocol: TCP
+     jump: DROP
+  become: yes
+- iptables:
+     chain: INPUT
+     protocol: TCP
+     jump: DROP
+  become: yes
