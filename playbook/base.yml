@@ -5,7 +5,10 @@
     ansible_ssh_user: root
     ansible_ssh_pass: electric dancy pants
   roles:
-    - role: install_keys
-    - role: install_packages
     - role: create_newuser
+    - role: install_packages
+    - role: set_dns   
+    - role: install_keys
+
+
 

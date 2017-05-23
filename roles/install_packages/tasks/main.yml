@@ -1,5 +1,4 @@
 ---
 - name: Install packages
   include: packages.yml
-- name: Set hostname
-  include: hostname.yml
+
