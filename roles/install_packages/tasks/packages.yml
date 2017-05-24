@@ -8,7 +8,8 @@
     - 'tcpdump'
     - 'mtr'
     - 'nano'  
-    - 'python-dbus' 
+    - 'python-dbus'
+    - 'pan' 
 - name: Install network manager (Debian)
   package:
     name: network-manager
