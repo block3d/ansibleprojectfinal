@@ -4,9 +4,5 @@
     type: ethernet
     dns4: 10.0.5.1,209.244.0.3
     state: present
-- name: set_dns
-  panos_mgtconfig:
-    ip_address: "10.0.5.10"
-    password: "electric dancy pants"
-    dns_server_primary: "10.0.5.1"
-    dns_server_secondary: "209.244.0.3"
+ 
+

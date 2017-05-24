@@ -9,7 +9,7 @@
     - 'mtr'
     - 'nano'  
     - 'python-dbus'
-    - 'pan' 
+    - 'dbus'
 - name: Install network manager (Debian)
   package:
     name: network-manager
