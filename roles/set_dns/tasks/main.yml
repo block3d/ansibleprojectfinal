@@ -4,5 +4,22 @@
     type: ethernet
     dns4: 10.0.5.1,209.244.0.3
     state: present
- 
-
+  when: "'Centos7' in group_names"
+- nmcli:
+    conn_name: enp0s3
+    type: ethernet
+    dns4: 10.0.5.1,209.244.0.3
+    state: present
+  when: "'Centos7b' in group_names"
+- nmcli:
+    conn_name: eth0
+    type: ethernet
+    state: present
+  when: "'Debian' in group_names"
+- nmcli:
+    conn_name: eth0
+    ifname: eth0
+    type: ethernet
+    dns4: 10.0.5.1,209.244.0.3
+    state: present
+  when: "'Debian' in group_names"
